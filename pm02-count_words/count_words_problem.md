@@ -1,3 +1,5 @@
+# Count Words
+
 When solving this week's exercise, make sure to hold off on searching directly for the answer in Google/StackOverflow. 🚫🔍 This is a fairly general exercise and there are a number of answers to it. I'd like you to struggle to come to an answer or two (or five?) on your own.
 
 I want you to write a function that accepts a string and returns a mapping (a dictionary or dictionary-like structure) that has words as the keys and the number of times each word was seen as the values.

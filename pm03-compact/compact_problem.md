@@ -1,3 +1,5 @@
+# Compact
+
 For this week's exercise I want you to write a function that accepts a sequence (a list for example) and returns a new iterable (anything you can loop over) with adjacent duplicate values removed.
 
 For example:
