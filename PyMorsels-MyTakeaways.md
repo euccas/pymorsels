@@ -1,6 +1,6 @@
 # PyMorsels My Takeaways
 
-## get_earliest    (2/18/18)
+## [get_earliest](https://github.com/euccas/PyMorsels/tree/master/pm01-get_earliest)    (2/18/18)
 - tuple unpacking (aka multiple assignment) is very powerful
 - the ability to compare tuples is powerful
 
@@ -13,7 +13,7 @@ def get_earliest(*dates):
     return min(dates, key=date_key)
 ```
 
-## count_words    (2/25/18)
+## [count_words](https://github.com/euccas/PyMorsels/tree/master/pm02-count_words)   (2/25/18)
 - from collection import defaultdict, defaultdict(int) sets default value 0
 - from collection import defaultdict, Counter object counts how many times an element appears using dictionary
 - remove punctuation in a sentence: notice the punctuation always appears after a letter (or before), so we can use strip() to remove them.
@@ -24,7 +24,7 @@ re.findall(pattern, string, flags=0)
 ```
 Return all non-overlapping matches of pattern in string, as a list of strings
 
-## compact    (3/1/18)
+## [compact](https://github.com/euccas/PyMorsels/tree/master/pm03-compact)    (3/1/18)
 - loop through a list, use i, item = enumerate to avoid using [index]
 - zip(iter1, iter2) => [(iter1[0], iter2[0]), (iter1[1], iter2[1]), …, (iter1[n-1], iter2[n-1])]
 - use * unpack a list
@@ -34,7 +34,7 @@ Return all non-overlapping matches of pattern in string, as a list of strings
 
 using * unpacking inside a list. This feature was added in Python 3.5. The * here is "unpacking" each of the items in our sequence into this new list, after object(). We're making object() the first item in our second list because a new object will not be compared as equal to any of the items in sequence (each object is only equal to itself by default).
 
-## negate   (3/14/18)
+## [negate](https://github.com/euccas/PyMorsels/tree/master/pm04-negate)   (3/14/18)
 - list comprehension
 - multi-dimentional list comprehension: use multi-line style to make it easier to read
 
@@ -49,3 +49,27 @@ using * unpacking inside a list. This feature was added in Python 3.5. The * her
 - How to get negative number: ```-n``` is faster than ```-1 * n```
 - [Talk on list comprehension](https://www.youtube.com/watch?v=5_cJIcgM7rw&__s=pftdsryd1xjaeaz5sgjo)
 - [Read on list comprehension](http://treyhunner.com/2015/12/python-list-comprehensions-now-in-color/)
+
+## [tail](https://github.com/euccas/PyMorsels/tree/master/pm05-tail) (3/19/18)
+- The usage of ```-n``` to slice a list (iterable): ```nums[-3:]``` returns the last *three* elements, same as ```nums[len(nums)-3:]```
+- Slice object can be used to remove repetitive code, such as slicing a list in multiple conditions with different index.
+```python
+if n == 1:
+    index = slice(0, 1)
+else:
+    index = slice(-(n-1), None)
+nums = nums[index]
+```
+- Deque: assign a maximum length of the deque, and deque will remove elements from head when keep appending elements when its full.
+  - We're setting the maximum size of our deque to n. When you append to a deque which has reached it's maximum length, it will efficiently remove the item closest to the beginning before appending the new item. So this is an efficient way to keep track of the most recent n items we've seen.
+  - Deque can be initialized with a iterable
+- Convert any iterable to a list: list(iterable)
+```python
+str = "hello"
+list(str) # ['h', 'e', 'l', 'l', 'o']
+```
+- List unpacking with * (since python 3.5)
+```
+for item in iterable:
+    items = [*items[-(n-1):], item]
+```
