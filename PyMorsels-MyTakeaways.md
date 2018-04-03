@@ -73,3 +73,6 @@ list(str) # ['h', 'e', 'l', 'l', 'o']
 for item in iterable:
     items = [*items[-(n-1):], item]
 ```
+
+## [is_anagram](https://github.com/euccas/PyMorsels/tree/master/pm06-is_anagram) (3/26/18)
+- 
