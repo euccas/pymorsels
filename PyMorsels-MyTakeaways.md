@@ -73,6 +73,12 @@ list(str) # ['h', 'e', 'l', 'l', 'o']
 for item in iterable:
     items = [*items[-(n-1):], item]
 ```
+- [Introduction of Deque](https://pymotw.com/3/collections/deque.html?__s=pftdsryd1xjaeaz5sgjo)
 
 ## [is_anagram](https://github.com/euccas/PyMorsels/tree/master/pm06-is_anagram) (3/26/18)
-- 
+
+## [circle](https://github.com/euccas/PyMorsels/tree/master/pm06-is_anagram) (4/2/18)
+- Property decorators, setters and getters in Python
+- __repr__, __str__ relies on __repr__ by default
+- Python 3.6+, new f string: ```f'test({a})'```
+>>>>>>> 93108bd2763260d7fa8b1af57b61c9aea3b99fbd
