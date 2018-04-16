@@ -81,4 +81,9 @@ for item in iterable:
 - Property decorators, setters and getters in Python
 - __repr__, __str__ relies on __repr__ by default
 - Python 3.6+, new f string: ```f'test({a})'```
->>>>>>> 93108bd2763260d7fa8b1af57b61c9aea3b99fbd
+
+## [multimax](https://github.com/euccas/PyMorsels/tree/master/pm08-multimax)
+- Difference of "offline algorithm" and "online algorithm". Difference of processing a list and an iterable without known length.
+- Key function, and the usage of key function in functions. Think key function as calculating scores of the original input data.
+- Use lambda in function default argument. The lambda function will only be created once, and be referenced when the function is called multiple times.
+

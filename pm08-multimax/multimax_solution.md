@@ -151,7 +151,7 @@ Okay let's take a look at the third bonus.
  
 ## Bonus #3
 
-For the third bonus we were supposed to accept a key argument which is a function that will determine how our values should be compared to each other. You can think of the key function as creating a "score" for each of our items. We could store a list of items and their scores, find the maximum score, and then return all items with that score:
+For the third bonus we were supposed to accept a key argument which is a function that will determine how our values should be compared to each other. **You can think of the key function as creating a "score" for each of our items.** We could store a list of items and their scores, find the maximum score, and then return all items with that score:
 
 ```python
 def multimax(iterable, key=None):
@@ -194,9 +194,13 @@ def multimax(iterable, key=None):
             maximums = [item]
             max_key = k
     return maximums
+```
+
 Unfortunately we can't turn this into a list comprehension because we're sometimes appending and sometimes clearing our list and starting over.
 
 The last thing we could do to improve this is to set the default value for our "key" argument to a function instead of None:
+
+```python
 ​def multimax(iterable, key=lambda x: x):
     """Return a list of all maximum values."""
     max_key = None
