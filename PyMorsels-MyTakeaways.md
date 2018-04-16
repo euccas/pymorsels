@@ -82,7 +82,7 @@ for item in iterable:
 - __repr__, __str__ relies on __repr__ by default
 - Python 3.6+, new f string: ```f'test({a})'```
 
-## [multimax](https://github.com/euccas/PyMorsels/tree/master/pm08-multimax)
+## [multimax](https://github.com/euccas/PyMorsels/tree/master/pm08-multimax)  (4/15/18)
 - Difference of "offline algorithm" and "online algorithm". Difference of processing a list and an iterable without known length.
 - Key function, and the usage of key function in functions. Think key function as calculating scores of the original input data.
 - Use lambda in function default argument. The lambda function will only be created once, and be referenced when the function is called multiple times.
