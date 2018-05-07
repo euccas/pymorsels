@@ -87,3 +87,27 @@ for item in iterable:
 - Key function, and the usage of key function in functions. Think key function as calculating scores of the original input data.
 - Use lambda in function default argument. The lambda function will only be created once, and be referenced when the function is called multiple times.
 
+## [uniques_only](https://github.com/euccas/PyMorsels/tree/master/pm09-uniques_only)  (5/6/18)
+- Sets are unordered. It doesn't guarantee consistent order.
+- Sets rely on hashes for lookups so containment checks won't slow down as our hash grows in size.
+- Python 3.6+ feature: ```dict.fromkeys``` create a dictionary (which has unique keys that maintain insertion ordered as of Python 3.6)
+```python
+dict.fromkeys(iterable)
+```
+- Check for hashability: from collections.abc import Hashable
+```python
+if isinstance(item, Hashable): # is hashable
+```
+- "it's easier to practice forgiveness than permission". Use exception handling
+```python
+    for item in iterable:
+        try:
+            if item not in seen_hashable:
+                yield item
+                seen_hashable.add(item)
+        except TypeError:
+            if item not in seen_unhashable:
+                yield item
+                seen_unhashable.append(item)
+```
+
