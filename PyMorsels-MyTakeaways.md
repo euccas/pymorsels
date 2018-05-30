@@ -111,3 +111,31 @@ if isinstance(item, Hashable): # is hashable
                 seen_unhashable.append(item)
 ```
 
+## [group_by](https://github.com/euccas/PyMorsels/tree/master/pm10-group_by)  (5/30/18) 
+- Use defaultdict, setdefault() whenever you have if/else to handle key exists/not case
+- setdefault(): returns the dict[key] when key exists, otherwise returns the default value you set
+- itertools groupby utility: works when the items to be grouped are all consecutive
+
+```python
+    iterable = sorted(iterable, key=key_func)
+    for key, items in groupby(iterable, key=key_func):
+        groups[key] = list(items)
+    return groups
+```
+- Lambda function usage: in function argument, will be computed only once
+
+```python
+    if key_func is None:
+        key_func = lambda x: x
+```
+
+```python
+def group_by(iterable, key_func=lambda x: x):
+```
+
+- PEP8: never use lambda function to assign a value. Use def instead.
+
+```python
+    if key_func is None:
+        def key_func(x): x
+```

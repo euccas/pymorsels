@@ -34,7 +34,7 @@ class GroupByTests(unittest.TestCase):
         self.assertEqual(output, word_groups)
 
     # To test the Bonus part of this exercise, comment out the following line
-    @unittest.expectedFailure
+    #@unittest.expectedFailure
     def test_no_key_function(self):
         words = ["apple", "animal", "apple", "animal", "animal"]
         word_groups = {
