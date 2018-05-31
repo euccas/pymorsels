@@ -139,3 +139,19 @@ def group_by(iterable, key_func=lambda x: x):
     if key_func is None:
         def key_func(x): x
 ```
+
+- Dictionary comprehension
+
+```python
+    return {
+        key: list(items)
+        for key, items in groupby(iterable, key=key_func)
+    }
+```
+
+## [lstrip](https://github.com/euccas/PyMorsels/tree/master/pm11-lstrip)  (5/30/18)
+- itertools dropoff function: dropoff(test_function, iterable). This function returns the original iterable while dropping off the items that make the test_function returns True.
+- Skim the itertools documents, take a look at the many functions for working with iterables in a lazy and efficient fashion
+- built-in function callable(): use it to decide whether a variable is a function
+- iterater protocal: iter_val = iter(iterable), next(iter_val), exception StopIteration error
+- try, except, else
